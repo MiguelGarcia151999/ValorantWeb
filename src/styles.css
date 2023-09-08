@@ -1,0 +1,21 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.carrusel{
+    padding: 5rem;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+}
+
+.box{
+    background-color: rgb(11, 11, 209);
+    height: 300px;
+}
+
+.box h3{
+    text-align: center;
+}
