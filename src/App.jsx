@@ -1,6 +1,6 @@
 import "./styles.css";
 import Agents from "../components/sliderAgents";
-import { getAgents } from "../apis/apiValorant";
+import { getAgents, searchAgent } from "../apis/apiValorant";
 import React from "react";
 
 const {useState, useEffect} = React
@@ -10,20 +10,27 @@ export default function App() {
 
     const fetchAgents = async () => {
         try {
-            const data = await getAgents();
-            const promise = data.map(async (agent) => {
-                return await get
+            const dataAgents = await getAgents();
+            const promise = dataAgents['data'].map(async (agent) => {
+                return await searchAgent(agent.uuid)
             })
+            const result = await Promise.all(promise)
+            console.log(result, 'app');
+            setAgents(result)
         } catch (error) {
-            
-        }
+            console.log(error)
+        }  
     }
 
+    useEffect(() => {
+        fetchAgents();
+    }, [])
+
   return (
-    <div>
       <div className="App">
-        <Agents />
+        <Agents 
+            agents={agents}
+        />
       </div>
-    </div>
   );
 }

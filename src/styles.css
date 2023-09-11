@@ -5,17 +5,18 @@
 }
 
 .carrusel{
-    padding: 5rem;
-    background-color: #000;
-    color: #fff;
-    height: 100vh;
+    display: flex;
+    overflow: scroll;
 }
 
-.box{
-    background-color: rgb(11, 11, 209);
-    height: 300px;
+.agente-cardBody{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    border: 2px solid rgb(4, 4, 4);
 }
 
-.box h3{
-    text-align: center;
+.imgAgente{
+ width: 200px;
+ height: 200px;
 }
