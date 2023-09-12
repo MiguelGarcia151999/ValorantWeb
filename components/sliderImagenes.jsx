@@ -1,23 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Agente = (props) => {
-const { agente } = props
+  const { agente } = props;
 
-console.log('slider imagenes')
-console.log(agente.data.displayName)
+  const [select, setSelect] = useState("");
 
-let agentImg = ''
-if (agente.data.displayName === 'KAY/O') {
-    agentImg = `../src/assets/Agentes/KAYO.png`
-}else{
-    agentImg = `../src/assets/Agentes/${agente.data.displayName}.png`
-}
+  useEffect(() => {
+    selectAgent(select);
+  }, [select]);
 
-    return(
-        <div className="agente-cardBody">
-                <img src={agentImg} alt="" className="imgAgente" />
-        </div>
-    )
-}
+
+  let agentImg = "";
+  if (agente.data.displayName === "KAY/O") {
+    agentImg = `../src/assets/AgentesCut/KAYO.png`;
+  } else {
+    agentImg = `../src/assets/AgentesCut/${agente.data.displayName}.png`;
+  }
+
+  function selectAgent(name) {
+    console.log(name, "nombre");
+
+    let agentImg = "";
+    if (name === "KAY/O") {
+      agentImg = `../src/assets/AgentesCut/KAYO.png`;
+    } else {
+      agentImg = `../src/assets/AgentesCut/${name}.png`;
+    }
+
+  }
+
+  return (
+    <div
+      className="agente-cardBody"
+      onClick={() => selectAgent(agente.data.displayName)}
+    >
+      <img src={agentImg} alt="" className="imgAgente" />
+    </div>
+  );
+};
 
 export default Agente;

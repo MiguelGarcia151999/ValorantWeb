@@ -4,19 +4,71 @@
     box-sizing: border-box;
 }
 
+.contenedorPrincipal{
+    background-color: #021633;
+    padding: 60px 60px 60px 60px;
+}
+
+.contentRed{
+    border: 10px solid rgb(177, 41, 41);
+    border-radius: 5px;
+    height: 88vh;
+    z-index: 0;
+}
+
 .carrusel{
+    width: 1535px;
+    position: fixed;
     display: flex;
     overflow: scroll;
+
+    z-index: 3;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .agente-cardBody{
-    width: 200px;
+    width: 190px;
     height: 200px;
-    margin: 5px;
-    border: 2px solid rgb(4, 4, 4);
+    margin: 5px 10px 5px 10px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.488);
 }
 
 .imgAgente{
- width: 200px;
+ width: 150px;
  height: 200px;
+ padding: 0px 0px 4px 0px;
+}
+
+.AgentImg-Body{
+    width: 800px;
+    height: 1000px;
+    position: fixed;
+    top: 10px;
+    background-color: white;
+    z-index: 1;
+}
+
+.agentBody{
+    width: 100px;
+    height: 100px;
+}
+
+.agenteBody-img{
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgbody{
+    z-index: 2;
+    position: fixed;
+    height: 1150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
 }
