@@ -1,6 +1,7 @@
 import "./styles.css";
 import Agents from "../components/sliderAgents";
 import agentBody from "../components/agentBody";
+import { AgentProvider } from "../src/context/AgentProvider"
 import { getAgents, searchAgent } from "../apis/apiValorant";
 import React from "react";
 
@@ -28,6 +29,7 @@ export default function App() {
   }, []);
 
   return (
+    <AgentProvider>
     <body className="body">
       <div className="contenedorPrincipal">
         <div className="contentRed">
@@ -40,5 +42,6 @@ export default function App() {
         <img src="../src/assets/Agentes/KAYO.png" className="imgbody" />
       </div>
     </body>
+    </AgentProvider>
   );
 }

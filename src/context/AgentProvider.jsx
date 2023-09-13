@@ -11,13 +11,12 @@ export const DataProvider = ({ children }) => {
     return <DataContext.Provider value={datos}>{children}</DataContext.Provider>;
 } */
 
-import React, { useState, createContext } from 'react';
-export const DataContext = createContext();
+import React, { createContext } from 'react';
 
-export const DataProvider = ({ children }) => {
-    const [selectAgnts, setSelectAgnts] = useState('');
-    const datos = {
-        selectAgnts, setSelectAgnts,
-    };
-    //return <DataContext.Provider value={datos}> {children} </DataContext.Provider>
-};
+export const AgentContext = createContext('')
+
+export const AgentProvider = (props) => {
+    console.log(props.children)
+    return <AgentContext.Provider value="Garcia"></AgentContext.Provider>
+}
+
