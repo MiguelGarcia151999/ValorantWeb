@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Agents(props) {
   const { agents } = props;
-  console.log(agents, "slideAgents");
 
   return (
     <div className="carrusel">

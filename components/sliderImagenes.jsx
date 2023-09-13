@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const Agente = (props) => {
   const { agente } = props;
+  const { displayName } = agente.data
 
   const [select, setSelect] = useState("");
 
@@ -11,28 +12,21 @@ const Agente = (props) => {
 
 
   let agentImg = "";
-  if (agente.data.displayName === "KAY/O") {
+  if (displayName === "KAY/O") {
     agentImg = `../src/assets/AgentesCut/KAYO.png`;
   } else {
-    agentImg = `../src/assets/AgentesCut/${agente.data.displayName}.png`;
+    agentImg = `../src/assets/AgentesCut/${displayName}.png`;
   }
 
   function selectAgent(name) {
     console.log(name, "nombre");
-
-    let agentImg = "";
-    if (name === "KAY/O") {
-      agentImg = `../src/assets/AgentesCut/KAYO.png`;
-    } else {
-      agentImg = `../src/assets/AgentesCut/${name}.png`;
-    }
 
   }
 
   return (
     <div
       className="agente-cardBody"
-      onClick={() => selectAgent(agente.data.displayName)}
+      onClick={() => selectAgent(displayName)}
     >
       <img src={agentImg} alt="" className="imgAgente" />
     </div>
