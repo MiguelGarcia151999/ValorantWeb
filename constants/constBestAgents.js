@@ -33,3 +33,7 @@ export const Pearl = [
 export const Lotus = [
     'KAY/O', 'Raze', 'Killjoy', 'Viper', 'Harbor'
 ]
+
+export const Sunset = [
+    'Harbor', 'Phoenix', 'Killjoy', 'Sova', 'Sage'
+]

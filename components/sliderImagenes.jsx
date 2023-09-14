@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { DataContext } from "../src/context/AgentContext"; 
 
 const Agente = (props) => {
   const { agente } = props;
   const { displayName } = agente.data
 
-  const [select, setSelect] = useState("");
+  const [select, setSelect] = useState('Killjoy');
+  const { contextData, setContextData } = useContext(DataContext)
 
   useEffect(() => {
     selectAgent(select);
@@ -19,8 +21,7 @@ const Agente = (props) => {
   }
 
   function selectAgent(name) {
-    console.log(name, "nombre");
-
+    setContextData(name)
   }
 
   return (

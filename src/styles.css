@@ -5,7 +5,7 @@
 }
 
 .contenedorPrincipal{
-    background-color: #021633;
+    background-color: #010d1f;
     padding: 60px 60px 60px 60px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .carrusel{
-    width: 1535px;
+    width: 1200px;
     position: fixed;
     display: flex;
     overflow: scroll;
@@ -31,7 +31,9 @@
 .agente-cardBody{
     width: 190px;
     height: 200px;
-    margin: 5px 10px 5px 10px;
+    margin: 5px 9px 5px 9px;
+    border: 1.5px solid rgba(119, 118, 118, 0.755);
+    background-color: rgba(111, 111, 111, 0.265);
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.488);
 }
 
@@ -50,11 +52,6 @@
     z-index: 1;
 }
 
-.agentBody{
-    width: 100px;
-    height: 100px;
-}
-
 .agenteBody-img{
     width: 100px;
     height: 100px;
@@ -71,4 +68,27 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
 
+}
+
+.container-agentMaps{
+    display: block;
+    width: 400px;
+    height: 400px;
+    padding: 40px;
+}
+
+.selected-IngSelected{
+    
+}
+
+.imgMapa{
+
+    height: 190px;
+    width: 400px;
+    border: 2px solid rgba(86, 85, 85, 0.874);
+}
+
+.Prueba{
+    color: white;
+    font-size: 100px;
 }

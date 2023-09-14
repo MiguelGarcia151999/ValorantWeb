@@ -2,8 +2,6 @@ import React from "react";
 import Agente from "./sliderImagenes";
 import Slider from "react-slick";
 import Breach from "../src/assets/Agentes/Breach.png";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 function Agents(props) {
   const { agents } = props;

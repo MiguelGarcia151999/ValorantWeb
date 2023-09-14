@@ -1,14 +1,15 @@
 import "./styles.css";
 import Agents from "../components/sliderAgents";
-import agentBody from "../components/agentBody";
-import { AgentProvider } from "../src/context/AgentProvider"
+import AgentMapas from "../components/agentsMaps";
 import { getAgents, searchAgent } from "../apis/apiValorant";
-import React from "react";
+import React, { useContext } from "react";
+import { DataContext } from "../src/context/AgentContext";
 
 const { useState, useEffect } = React;
 
 export default function App() {
   const [agents, setAgents] = useState([]);
+  const contexData = useContext(DataContext);
 
   const fetchAgents = async () => {
     try {
@@ -17,7 +18,8 @@ export default function App() {
         return await searchAgent(agent.uuid);
       });
       const result = await Promise.all(promise);
-      console.log(result, "app");
+      console.log(contexData.contextData, "APPPPP");
+
       setAgents(result);
     } catch (error) {
       console.log(error);
@@ -26,22 +28,29 @@ export default function App() {
 
   useEffect(() => {
     fetchAgents();
-  }, []);
+  }, [contexData]);
 
   return (
-    <AgentProvider>
     <body className="body">
       <div className="contenedorPrincipal">
         <div className="contentRed">
+          <div>
+           <AgentMapas agent={contexData.contextData} />
+          </div>
           <div>
             <Agents agents={agents} />
           </div>
         </div>
       </div>
+
       <div>
-        <img src="../src/assets/Agentes/KAYO.png" className="imgbody" />
+        <img
+          src={`../src/assets/Agentes/${
+            contexData.contextData === "KAY/O" ? "KAYO" : contexData.contextData
+          }.png`}
+          className="imgbody"
+        />
       </div>
     </body>
-    </AgentProvider>
   );
 }
