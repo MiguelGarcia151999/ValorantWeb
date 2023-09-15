@@ -38,7 +38,7 @@ export const Brimstone = [
     'Bind', 'Fracture', 'Ascent', 'Lotus'
 ]
 
-export const Sky = [
+export const Skye = [
     'Bind', 'Fracture', 'Ascent', 'Split'
 ]
 
@@ -68,4 +68,20 @@ export const Harbor = [
 
 export const Phoenix = [
     'Sunset', 'Split', 'Ascent', 'Icebox'
+]
+
+export const Deadlock = [
+    'Sunset', 'Split', 'Ascent', 'Haven'
+]
+
+export const Gekko = [
+    'Lotus', 'Ascent', 'Sunset', 'Fracture'
+]
+
+export const Yoru = [
+    'Icebox', 'Bind', 'Haven', 'Fracture'
+]
+
+export const Reyna = [
+    'Haven', 'Ascent', 'Bind', 'Fracture'
 ]

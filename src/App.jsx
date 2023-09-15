@@ -35,21 +35,22 @@ export default function App() {
       <div className="contenedorPrincipal">
         <div className="contentRed">
           <div>
-           <AgentMapas agent={contexData.contextData} />
+            <img
+              src={`../src/assets/Agentes/${
+                contexData.contextData === "KAY/O"
+                  ? "KAYO"
+                  : contexData.contextData
+              }.png`}
+              className="imgbody"
+            />
           </div>
           <div>
             <Agents agents={agents} />
           </div>
+          <div>
+            <AgentMapas agent={contexData.contextData} />
+          </div>
         </div>
-      </div>
-
-      <div>
-        <img
-          src={`../src/assets/Agentes/${
-            contexData.contextData === "KAY/O" ? "KAYO" : contexData.contextData
-          }.png`}
-          className="imgbody"
-        />
       </div>
     </body>
   );

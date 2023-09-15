@@ -1,94 +1,372 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+@import url("https://fonts.cdnfonts.com/css/valorant");
+@import url('https://fonts.cdnfonts.com/css/ge-body');
+@import url('https://fonts.cdnfonts.com/css/mona-sans');
+@import url('https://fonts.cdnfonts.com/css/alesand');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.contenedorPrincipal{
-    background-color: #010d1f;
-    padding: 60px 60px 60px 60px;
+.contenedorPrincipal {
+  background-color: #010d1f;
+  padding: 60px 60px 60px 60px;
+  flex-wrap: wrap;
 }
 
-.contentRed{
-    border: 10px solid rgb(177, 41, 41);
-    border-radius: 5px;
-    height: 88vh;
-    z-index: 0;
+.contentRed {
+  border: 10px solid rgb(177, 41, 41);
+  border-radius: 5px;
+  height: 88vh;
+  z-index: 0;
 }
 
-.carrusel{
-    width: 1200px;
-    position: fixed;
-    display: flex;
-    overflow: scroll;
+.carrusel {
+  width: 1200px;
+  position: fixed;
+  display: flex;
+  overflow: scroll;
+  flex-wrap: nowrap;
 
-    z-index: 3;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+  z-index: 3;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.agente-cardBody{
-    width: 190px;
-    height: 200px;
-    margin: 5px 9px 5px 9px;
-    border: 1.5px solid rgba(119, 118, 118, 0.755);
-    background-color: rgba(111, 111, 111, 0.265);
+.agente-cardBody {
+  width: 190px;
+  height: 200px;
+  margin: 5px 9px 5px 9px;
+  border: 1.5px solid rgba(119, 118, 118, 0.755);
+  background-color: rgba(111, 111, 111, 0.265);
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.488);
+}
+
+.imgAgente {
+  width: 150px;
+  height: 200px;
+  padding: 0px 0px 4px 0px;
+}
+
+.AgentImg-Body {
+  width: 800px;
+  height: 1000px;
+  position: fixed;
+  top: 10px;
+  background-color: white;
+  z-index: 1;
+}
+
+.agenteBody-img {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgbody {
+  z-index: 2;
+  position: fixed;
+  height: 1150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.container-agentMaps {
+  display: block;
+  width: 400px;
+  height: 400px;
+  padding: 40px;
+}
+
+.selected-IngSelected {
+}
+
+.imgMapa {
+  height: 190px;
+  width: 400px;
+  border: 2px solid rgba(86, 85, 85, 0.874);
+}
+
+.Prueba {
+  color: white;
+  font-size: 100px;
+}
+
+.Prueba {                 
+    font-family: 'Alesand', sans-serif;                   
+  margin: 30px 0px 0px 0px;
+
+}
+
+.PruebaMapa{
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.488);
-}
-
-.imgAgente{
- width: 150px;
- height: 200px;
- padding: 0px 0px 4px 0px;
-}
-
-.AgentImg-Body{
-    width: 800px;
-    height: 1000px;
-    position: fixed;
-    top: 10px;
-    background-color: white;
-    z-index: 1;
-}
-
-.agenteBody-img{
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-}
-
-.imgbody{
-    z-index: 2;
-    position: fixed;
-    height: 1150px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-
-}
-
-.container-agentMaps{
-    display: block;
+    background-color: rgba(111, 111, 111, 0.143);
+    padding-top: 10px;
+    font-size: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
     width: 400px;
-    height: 400px;
-    padding: 40px;
+    cursor: pointer;
 }
 
-.selected-IngSelected{
-    
-}
 
-.imgMapa{
-
-    height: 190px;
+.mapsTier{
+    display: flex;
     width: 400px;
-    border: 2px solid rgba(86, 85, 85, 0.874);
 }
 
-.Prueba{
-    color: white;
-    font-size: 100px;
+.TiersImg{
+    height: 80px;
+    width: 80px;
+}
+
+@media (min-width: 360px){
+
+    .contenedorPrincipal {
+        background-color: #ed00cd;
+        padding: 60px 30px 30px 30px;
+        height: 100%;
+        width: 411px;
+      }
+      
+      .contentRed {
+        border: 10px solid rgb(177, 41, 41);
+        border-radius: 5px;
+        height: calc(100% - 10px);
+        display: flex;
+        flex-direction: column-reverse;
+        /*z-index: 0;*/
+      }
+
+      .imgbody {
+        /*z-index: 2;*/
+        position: fixed;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+      
+      .carrusel {
+        width: 1200px;
+        position: fixed;
+        display: flex;
+        overflow: scroll;
+        flex-wrap: nowrap;
+      
+        /*z-index: 3;*/
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .agente-cardBody {
+        width: 190px;
+        height: calc(100% - 10px);
+        margin: 5px 9px 5px 9px;
+        border: 1.5px solid rgba(119, 118, 118, 0.755);
+        background-color: rgba(111, 111, 111, 0.265);
+        box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.488);
+      }
+      
+      .imgAgente {
+        width: 150px;
+        height: calc(100% - 10px);
+        padding: 0px 0px 4px 0px;
+      }
+      
+      .AgentImg-Body {
+        width: 800px;
+        height: calc(100% - 10px);
+        position: fixed;
+        top: 10px;
+        background-color: white;
+        /*z-index: 1;*/
+      }
+      
+      .agenteBody-img {
+        width: 100px;
+        height: calc(100% - 10px);
+        align-items: center;
+        justify-content: center;
+      }
+      
+      
+      
+      .container-agentMaps {
+        display: block;
+        width: 400px;
+        height: calc(100% - 10px);
+        padding: 40px;
+      }
+      
+      .selected-IngSelected {
+      }
+      
+      .imgMapa {
+        height: 190px;
+        width: calc(100% - 10px);
+        border: 2px solid rgba(86, 85, 85, 0.874);
+      }
+      
+      .Prueba {
+        color: white;
+        font-size: 100px;
+      }
+      
+      .Prueba {                 
+          font-family: 'Alesand', sans-serif;                   
+        margin: 30px 0px 0px 0px;
+      
+      }
+      
+      .PruebaMapa{
+          box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.488);
+          background-color: rgba(111, 111, 111, 0.143);
+          padding-top: 10px;
+          font-size: 50px;
+          margin-top: 10px;
+          padding-left: 10px;
+          width: 400px;
+          cursor: pointer;
+      }
+      
+      
+      .mapsTier{
+          display: flex;
+          width: 400px;
+      }
+      
+      .TiersImg{
+          height: calc(100% - 10px);
+          width: 80px;
+      }
+
+}
+
+@media (min-width: 800px){
+    .contenedorPrincipal {
+        background-color: #0669eb;
+        
+        height: 400px;
+        width: 510px;
+        
+      }
+      
+      .contentRed {
+        border: 10px solid rgb(177, 41, 41);
+        border-radius: 5px;
+        height: 88vh;
+        z-index: 0;
+      }
+      
+      .carrusel {
+        width: 1200px;
+        position: fixed;
+        display: flex;
+        overflow: scroll;
+        flex-wrap: nowrap;
+      
+        z-index: 3;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .agente-cardBody {
+        width: 190px;
+        height: 200px;
+        margin: 5px 9px 5px 9px;
+        border: 1.5px solid rgba(119, 118, 118, 0.755);
+        background-color: rgba(111, 111, 111, 0.265);
+        box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.488);
+      }
+      
+      .imgAgente {
+        width: 150px;
+        height: 200px;
+        padding: 0px 0px 4px 0px;
+      }
+      
+      .AgentImg-Body {
+        width: 800px;
+        height: 1000px;
+        position: fixed;
+        top: 10px;
+        background-color: white;
+        z-index: 1;
+      }
+      
+      .agenteBody-img {
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .imgbody {
+        z-index: 2;
+        position: fixed;
+        height: 1150px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+      
+      .container-agentMaps {
+        display: block;
+        width: 400px;
+        height: 400px;
+        padding: 40px;
+      }
+      
+      .selected-IngSelected {
+      }
+      
+      .imgMapa {
+        height: 190px;
+        width: 400px;
+        border: 2px solid rgba(86, 85, 85, 0.874);
+      }
+      
+      .Prueba {
+        color: white;
+        font-size: 100px;
+      }
+      
+      .Prueba {                 
+          font-family: 'Alesand', sans-serif;                   
+        margin: 30px 0px 0px 0px;
+      
+      }
+      
+      .PruebaMapa{
+          box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.488);
+          background-color: rgba(111, 111, 111, 0.143);
+          padding-top: 10px;
+          font-size: 50px;
+          margin-top: 10px;
+          padding-left: 10px;
+          width: 400px;
+          cursor: pointer;
+      }
+      
+      
+      .mapsTier{
+          display: flex;
+          width: 400px;
+      }
+      
+      .TiersImg{
+          height: 80px;
+          width: 80px;
+      }
+
 }
